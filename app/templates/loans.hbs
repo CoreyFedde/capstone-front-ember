@@ -1,7 +1,10 @@
-<h2>Loans</h2>
-{{loan-list/create-loan-form createLoan="createLoan"}}
-<div>
-{{#each model as |loan|}}
-{{loan-list/card loan=loan deleteLoan="deleteLoan"}}
-{{/each}}
+{{page-header title="Loans"}}
+<div class="col-md-10 col-md-offset-1">
+  <h2>Loans</h2>
+  {{loan-list/create-loan-form createLoan="createLoan"}}
+  <div>
+  {{#each model as |loan|}}
+  {{loan-list/card loan=loan deleteLoan="deleteLoan"}}
+  {{/each}}
+  </div>
 </div>
