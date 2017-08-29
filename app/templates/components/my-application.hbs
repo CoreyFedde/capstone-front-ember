@@ -13,8 +13,12 @@
         <li><a href="#">Wellness</a></li>
         <li>{{#link-to "loans"}}Loans{{/link-to}}</li>
         <li><a href="#">Investing</a></li>
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-        <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+          <div class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+            <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+          </div></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
         <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
@@ -24,12 +28,12 @@
   </div>
 </nav>
 
-<h1>Corey Web App!</h1>
+{{!-- <h1>Corey Web App!</h1> --}}
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
 
-<div class="col-md-8 col-md-offset-2">
+{{!-- <div class="col-md-10 col-md-offset-1"> --}}
   {{outlet}}
-</div>
+{{!-- </div> --}}
