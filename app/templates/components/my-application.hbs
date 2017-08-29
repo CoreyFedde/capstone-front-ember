@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar-fixed-top navbar-default bg-faded">
   <div class="container-fluid">
     {{navbar-header}}
 
@@ -15,8 +15,8 @@
         <li><a href="#">Investing</a></li>
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
           <div class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+              <li>{{#link-to "profile"}}Profile{{/link-to}}</li>
+            {{!-- <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li> --}}
             <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
           </div></li>
         {{else}}
@@ -34,6 +34,8 @@
   {{flash-message flash=flash}}
 {{/each}}
 
+{{!-- <div class="container-fluid"> --}}
 {{!-- <div class="col-md-10 col-md-offset-1"> --}}
   {{outlet}}
+{{!-- </div> --}}
 {{!-- </div> --}}
