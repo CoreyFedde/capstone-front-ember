@@ -1,6 +1,7 @@
 <h2>Loans</h2>
-<ul>
+{{loan-list/create-loan-form createLoan="createLoan"}}
+<div>
 {{#each model as |loan|}}
-  <li>{{loan.name}}</li>
+{{loan-list/card loan=loan deleteLoan="deleteLoan"}}
 {{/each}}
-</ul>
+</div>
