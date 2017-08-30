@@ -1,12 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  selectedTool: {
-    value: null,
-  },
+  selectedTool: null,
   actions: {
-    selectTool(tool) {
-      this.set('selectedTool.value', tool)
+    selectTool(toolId) {
+      // let tool = this.get('store').peekRecord('tool', toolId)
+      this.set('selectedTool', toolId)
       return this.sendAction('selectTool', this.get('selectedTool'))
     },
   },

@@ -6,19 +6,16 @@
   <option value="remaining-balance">Remaining balance</option> --}}
 </select>
 
-<h1> {{selectedLoan.name}}</h1>
-
-{{#unless selectedTool.value}}
+{{#unless selectedTool}}
   <h3> Select a tool to use</h3>
 {{/unless}}
 
-{{#if (eq selectedTool.value "loan-review")}}
-<h1>yep</h1>
+{{#if (eq selectedTool "loan-review")}}
 <ul>
   {{#each loans as |loan|}}
-    {{!-- {{#if (eq selectedLoan.value loan.id)}} --}}
+    {{#if (eq selectedLoan.id loan.id)}}
       <li>{{loan-list/card loan=loan}}</li>
-    {{!-- {{/if}} --}}
+    {{/if}}
   {{/each}}
 </ul>
 {{!-- {{else if (eq selectedTool.value "principal-v-interest")}}

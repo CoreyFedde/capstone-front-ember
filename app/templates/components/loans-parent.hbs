@@ -5,8 +5,11 @@
       <div class="col-md-6">
         <h3>Your View</h3>
         {{!-- works --}}
-        {{loans/drop-down loans=loans createLoan="createLoan" selectLoan="selectLoan" selectTool="selectTool"}}
-{{selectedLoan.id}}
+        {{loans/drop-down loans=loans createLoan="createLoan" selectLoan="selectLoan" selectedTool="selectedTool"}}
+
+        {{selectedLoan}}
+        {{selectedLoan.id}}
+
         {{!-- works --}}
         {{#unless selectedLoan}}
           <h3> Select a loan to examine or create a new one </h3>
@@ -19,9 +22,9 @@
         {{else}}
           <ul>
             {{#each loans as |loan|}}
-              {{!-- {{#if (eq selectedLoan loan)}} --}}
+              {{#if (eq selectedLoan loan)}}
                 <li>{{loan-list/card deleteLoan="deleteLoan" loan=loan}}</li>
-              {{!-- {{/if}} --}}
+              {{/if}}
             {{/each}}
           </ul>
         {{/if}}
@@ -41,9 +44,8 @@
         {{!-- {{loan-list/create-loan-form createLoan="createLoan"}} --}}
       </div>
       <div class="col-md-6">
-        {{!-- <h3>{{selectloan.value}}</h3> --}}
         <h3>Tools</h3>
-          {{loans/tools-drop-down loans=model createLoan="createLoan" selectedLoan=selectedLoan selectTool="selectTool"}}
+          {{loans/tools-drop-down loans=loans createLoan="createLoan" selectedLoan=selectedLoan selectTool="selectTool" selectedTool=selectedTool}}
       </div>
     </div>
   </div>
