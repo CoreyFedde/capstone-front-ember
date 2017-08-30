@@ -14,7 +14,7 @@
 <ul>
   {{#each loans as |loan|}}
     {{#if (eq selectedLoan.id loan.id)}}
-      <li>{{loan-list/card loan=loan}}</li>
+      <li>{{tools-drop-down/card loan=loan}}</li>
     {{/if}}
   {{/each}}
 </ul>

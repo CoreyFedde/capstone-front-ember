@@ -15,10 +15,8 @@
           <h3> Select a loan to examine or create a new one </h3>
           {{/unless}}
 
-          {{!-- works --}}
         {{#if (eq selectedLoan "new-loan")}}
           {{loan-list/create-loan-form createLoan="createLoan"}}
-    {{!-- Not working --}}
         {{else}}
           <ul>
             {{#each loans as |loan|}}
