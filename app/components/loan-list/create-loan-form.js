@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   newLoan: {
-    name: null
+    name: null,
+    lender: null,
+    principal: null,
+    interest_rate: null,
+    loan_length: null
   },
   actions: {
     createLoan(){

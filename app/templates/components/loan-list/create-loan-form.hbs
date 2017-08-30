@@ -1,5 +1,14 @@
 <h4> Create a new list</h4>
 <form {{action 'createLoan' on="submit"}}>
-  {{input placeholder="Loan name" value=newLoan.name}}
+  <label>Name</label>
+  {{input placeholder="Name" value=newLoan.name}}
+  <label>Lender</label>
+  {{input placeholder="Lender" value=newLoan.lender}}
+  <label>Principal</label>
+  {{input placeholder="$" value=newLoan.principal}}
+  <label>Interest Rate</label>
+  {{input placeholder="%" value=newLoan.interest_rate}}
+  <label>Loan length</label>
+  {{input placeholder="years" value=newLoan.loan_length}}
   <button type="submit">Submit</button>
 </form>
