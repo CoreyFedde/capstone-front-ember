@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       this.set('selectedLoan', loan)
       return this.sendAction('selectLoan', this.get('selectedLoan'))
     },
-    deleteLoan(){
+    deleteLoan(loan){
       return this.sendAction('deleteLoan', this.get('loan'))
     }
   },

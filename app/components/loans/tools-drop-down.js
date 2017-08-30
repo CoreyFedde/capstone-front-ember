@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   selectedTool: {
-    value: "loan-review",
+    value: null,
   },
   actions: {
     selectTool(tool) {

@@ -6,13 +6,11 @@
         <h3>Your View</h3>
         {{!-- works --}}
         {{loans/drop-down loans=loans createLoan="createLoan" selectLoan="selectLoan" selectTool="selectTool"}}
-
+{{selectedLoan.id}}
         {{!-- works --}}
         {{#unless selectedLoan}}
           <h3> Select a loan to examine or create a new one </h3>
           {{/unless}}
-
-{{selectedLoan}}
 
           {{!-- works --}}
         {{#if (eq selectedLoan "new-loan")}}
@@ -21,13 +19,14 @@
         {{else}}
           <ul>
             {{#each loans as |loan|}}
-              {{loan}}
-              {{#if (eq selectedLoan loan)}}
-              <li>{{loan-list/card loan=loan}}</li>
-              {{/if}}
+              {{!-- {{#if (eq selectedLoan loan)}} --}}
+                <li>{{loan-list/card deleteLoan="deleteLoan" loan=loan}}</li>
+              {{!-- {{/if}} --}}
             {{/each}}
           </ul>
         {{/if}}
+        {{!-- <p> {{loan}} </p>
+        <p> selected: {{selectedLoan}}</p> --}}
         {{!-- {{#if (eq selectloan.value "new-loan")}}
         <h1>create new</h1>
         {{else}}
