@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+    modulePrefix: 'capstone-front-ember',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
