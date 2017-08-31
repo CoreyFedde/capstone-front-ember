@@ -1,12 +1,10 @@
 {{page-header title="Loans"}}
 <div class="container">
   <div class="col-md-12">
-    <ul>
-      <li>{{loan-list/create-loan-form createLoan="createLoan" loan=loan}}</li>
+    {{loan-list/create-loan-form class="create-form" createLoan="createLoan" loan=loan}}
       {{#each loans as |loan|}}
-          <li>{{loan-list/card deleteLoan="deleteLoan" loan=loan}}</li>
+        {{loan-list/card class="loans-list" deleteLoan="deleteLoan" loan=loan}}
       {{/each}}
-    </ul>
     {{!-- <div class="row">
       <div class="col-md-6">
         <h3>Your View</h3>
