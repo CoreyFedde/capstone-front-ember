@@ -3,6 +3,7 @@
   <div class="col-md-12">
     {{loan-list/create-loan-form class="create-form" createLoan="createLoan" loan=loan}}
     <h3>Tracked Loans</h3>
+    <h5>Click on a loan to apply our financial tools</h5>
       {{#each loans as |loan|}}
         {{loan-list/card class="loans-list" deleteLoan="deleteLoan" loan=loan}}
       {{/each}}
