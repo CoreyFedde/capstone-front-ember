@@ -1,0 +1,14 @@
+<form {{action 'updateLoan' on="submit"}}>
+  <label>Name</label>
+  {{input placeholder=loan.name value=loan.name type="text"}}
+  <label>Lender</label>
+  {{input placeholder=loan.lender value=loan.lender type="text"}}
+  <label>Principal</label>
+  {{input placeholder=loan.principal value=loan.principal type="number" step="0.01"}}
+  <label>Interest rate</label>
+  {{input placeholder=loan.interest_rate value=loan.interest_rate type="number" step="0.02"}}
+  <label>Length</label>
+  {{input placeholder=loan.loan_length value=loan.loan_length type="number" step="0.01"}}
+  <button type="submit">Submit</button>
+</form>
+{{#link-to "loans"}}Back{{/link-to}}

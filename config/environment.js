@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+    modulePrefix: 'capstone-front-ember',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -34,6 +34,7 @@ module.exports = function (environment) {
       p + c.charCodeAt().toString(16), '')
     );
     ENV.apiHost = `http://localhost:${port}`;
+    // ENV.apiHost = `https://thawing-dusk-42030.herokuapp.com`;
   }
 
   if (environment === 'test') {

@@ -11,3 +11,5 @@ As a user, I want to be able to...
 "visualize the retirement investing"
 "compare paying down loans to investing in stocks or index funds"
 "share my loans and retirements with other users"
+
+This work is carried over from previous template: https://github.com/CoreyFedde/capstone-front

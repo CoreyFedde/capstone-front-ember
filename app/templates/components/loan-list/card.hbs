@@ -1,0 +1,11 @@
+{{#link-to 'loan' loan}}
+<h3>Loan: {{loan.name}}</h3>
+{{/link-to}}
+<h5>Lender: {{loan.lender}}</h5>
+<h5>Principal: $ {{loan.principal}}</h5>
+<h5>Interest rate: {{loan.interest_rate}}%</h5>
+<h5>Length: {{loan.loan_length}} year(s)</h5>
+<button {{action 'deleteLoan'}}>Delete</button>
+{{#link-to 'loans-edit' loan}}
+<button>Edit</button>
+{{/link-to}}

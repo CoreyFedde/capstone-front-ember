@@ -1,0 +1,32 @@
+{{page-header title="Loans"}}
+<div class="container">
+  <div class="col-md-12">
+    {{loan-list/create-loan-form class="create-form" createLoan="createLoan" loan=loan}}
+    <h3>Tracked Loans</h3>
+    <h5>Click on a loan to apply our financial tools</h5>
+      {{#each loans as |loan|}}
+        {{loan-list/card class="loans-list" deleteLoan="deleteLoan" loan=loan}}
+      {{/each}}
+    {{!-- <div class="row">
+      <div class="col-md-6">
+        <h3>Your View</h3>
+        {{loans/drop-down loans=loans selectLoan="selectLoan" selectedTool="selectedTool"}}
+        {{#unless selectedLoan}}
+          <h3> Select a loan to examine or create a new one </h3>
+          {{/unless}}
+
+        {{#if (eq selectedLoan "new-loan")}}
+          {{loan-list/create-loan-form createLoan="createLoan"}}
+        {{else}}
+          <ul>
+            {{#each loans as |loan|}}
+              {{#if (eq selectedLoan loan)}}
+                <li>{{loan-list/card deleteLoan="deleteLoan" loan=loan}}</li>
+              {{/if}}
+            {{/each}}
+          </ul>
+        {{/if}} --}}
+      {{!-- </div> --}}
+    {{!-- </div> --}}
+  </div>
+</div>
