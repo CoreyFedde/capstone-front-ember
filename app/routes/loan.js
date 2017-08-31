@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-    return this.get('store').findRecord('loan', params.loan_id)
+    return this.get('store').findRecord('loan', params.loan_id);
   },
   actions: {
     createLoan(loan) {
@@ -10,7 +10,7 @@ export default Ember.Route.extend({
       newLoan.save()
     },
     deleteLoan(loan) {
-      loan.destroyRecord()
+      loan.destroyRecord();
     }
   }
 });

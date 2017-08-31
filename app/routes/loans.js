@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   },
   actions: {
     createLoan(loan) {
-      let newLoan = this.get('store').createRecord('loan', loan)
+      let newLoan = this.get('store').createRecord('loan', loan);
       newLoan.save()
       .then(() => {
         this.get('flashMessages')
@@ -22,7 +22,7 @@ export default Ember.Route.extend({
       loan.destroyRecord()
         .then(() => {
           this.get('flashMessages')
-          .success('Successfully deleted a loan!');
+          .success('Successfully created a loan!');
         })
         .catch(() => {
           this.get('flashMessages')

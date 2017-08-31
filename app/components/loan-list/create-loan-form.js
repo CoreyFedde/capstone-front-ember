@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   actions: {
     createLoan(){
       // console.log(this.get('newLoan'))
-      this.sendAction('createLoan', this.get('newLoan'))
+      this.sendAction('createLoan', this.get('newLoan'));
       this.set('newLoan', {});
       // this.set("newLoan", null);
       // this.set("newLoan.lender", null);
