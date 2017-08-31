@@ -53,7 +53,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/capstone-front-ember';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://thawing-dusk-42030.herokuapp.com/';
+    ENV.apiHost = 'https://thawing-dusk-42030.herokuapp.com';
   }
 
   return ENV;
