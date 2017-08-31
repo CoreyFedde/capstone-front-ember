@@ -1,6 +1,8 @@
 <h5>{{loan.name}}</h5>
 <button {{action 'deleteLoan'}}>Delete</button>
+{{#link-to 'loans-edit' loan}}
 <button>Edit</button>
+{{/link-to}}
 <p>{{loan.lender}}</p>
 <p>{{loan.interest_rate}}</p>
 <p>{{loan.principal}}</p>
