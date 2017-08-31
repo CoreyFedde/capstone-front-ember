@@ -1,16 +1,15 @@
 {{page-header title="Loans"}}
 <div class="container">
   <div class="col-md-12">
-    <div class="row">
+    <ul>
+      {{#each loans as |loan|}}
+          <li>{{loan-list/card deleteLoan="deleteLoan" loan=loan}}</li>
+      {{/each}}
+    </ul>
+    {{!-- <div class="row">
       <div class="col-md-6">
         <h3>Your View</h3>
-        {{!-- works --}}
         {{loans/drop-down loans=loans selectLoan="selectLoan" selectedTool="selectedTool"}}
-
-        {{selectedLoan}}
-        {{selectedLoan.id}}
-
-        {{!-- works --}}
         {{#unless selectedLoan}}
           <h3> Select a loan to examine or create a new one </h3>
           {{/unless}}
@@ -25,26 +24,8 @@
               {{/if}}
             {{/each}}
           </ul>
-        {{/if}}
-        {{!-- <p> {{loan}} </p>
-        <p> selected: {{selectedLoan}}</p> --}}
-        {{!-- {{#if (eq selectloan.value "new-loan")}}
-        <h1>create new</h1>
-        {{else}}
-        <h1>tracked loan</h1>
-        {{/if}}
-
-        {{#if selectloan}}
-        <h1>Has value</h1>
-        {{else}}
-        <h1>no value</h1>
         {{/if}} --}}
-        {{!-- {{loan-list/create-loan-form createLoan="createLoan"}} --}}
-      </div>
-      <div class="col-md-6">
-        <h3>Tools</h3>
-          {{loans/tools-drop-down loans=loans createLoan="createLoan" selectedLoan=selectedLoan selectTool="selectTool" selectedTool=selectedTool}}
-      </div>
-    </div>
+      {{!-- </div> --}}
+    {{!-- </div> --}}
   </div>
 </div>
