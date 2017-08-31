@@ -11,9 +11,7 @@
 {{/unless}}
 
 {{#if (eq selectedTool "loan-review")}}
-<ul>
-      <li>{{tools-drop-down/card loan=loan}}</li>
-</ul>
+  {{tools-drop-down/card loan=loan}}
 {{!-- {{else if (eq selectedTool.value "principal-v-interest")}}
 <p>Principal vs Interest</p>
 {{else if (eq selectedTool.value "payment-slider")}}
