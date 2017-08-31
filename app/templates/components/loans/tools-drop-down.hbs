@@ -1,0 +1,21 @@
+<select class="form-control" onchange={{action 'selectTool' value="target.value"}}>
+  <option disabled selected>Choose a tool!</option>
+  <option value="loan-review">Loan Review</option>
+  {{!-- <option value="principal-v-interest">Principal vs. Interest</option>
+  <option value="payment-slider">Payment slider</option>
+  <option value="remaining-balance">Remaining balance</option> --}}
+</select>
+
+{{#unless selectedTool}}
+  <h3> Select a tool to use</h3>
+{{/unless}}
+
+{{#if (eq selectedTool "loan-review")}}
+  {{tools-drop-down/card loan=loan}}
+{{!-- {{else if (eq selectedTool.value "principal-v-interest")}}
+<p>Principal vs Interest</p>
+{{else if (eq selectedTool.value "payment-slider")}}
+<p>Payment Slider</p>
+{{else if (eq selectedTool.value "remaining-balance")}}
+<p>Remaining balance</p> --}}
+{{/if}}

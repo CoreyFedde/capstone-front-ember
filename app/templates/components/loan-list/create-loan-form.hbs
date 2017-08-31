@@ -1,5 +1,17 @@
-<h4> Create a new list</h4>
+<h3> Create a new list</h3>
 <form {{action 'createLoan' on="submit"}}>
-  {{input placeholder="Loan name" value=newLoan.name}}
+  <label>Name</label>
+  {{input placeholder="Name" value=newLoan.name type="text"}}
+  <label>Lender</label>
+  {{input placeholder="Lender" value=newLoan.lender type="text"}}
+  <label>Principal</label>
+  {{input placeholder="$" value=newLoan.principal type="number" step="0.01"}}
+  <label>Interest Rate</label>
+  {{input placeholder="%" value=newLoan.interest_rate type="number" step="0.001"}}
+  <label>Loan length</label>
+  {{input placeholder="years" value=newLoan.loan_length type="number" step="0.01"}}
   <button type="submit">Submit</button>
+  <button class="btn btn-default" {{action "reset"}}>
+    Cancel
+  </button>
 </form>

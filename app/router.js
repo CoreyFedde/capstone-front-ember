@@ -12,6 +12,8 @@ Router.map(function () {
   this.route('users');
   this.route('loans');
   this.route('profile');
+  this.route('loan', { path: '/loans/:loan_id' });
+  this.route('loans-edit', { path: '/loans/:loan_id/edit'});
 });
 
 export default Router;
