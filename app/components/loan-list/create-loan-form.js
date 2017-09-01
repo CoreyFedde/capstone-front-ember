@@ -10,18 +10,19 @@ export default Ember.Component.extend({
   },
   actions: {
     createLoan(){
-      // console.log(this.get('newLoan'))
       this.sendAction('createLoan', this.get('newLoan'));
-      this.set('newLoan', {});
-      // this.set("newLoan", null);
-      // this.set("newLoan.lender", null);
-      // this.set("newLoan.principal", null);
-      // this.set("newLoan.interest_rate", null);
-      // this.set("newLoan.loan_length", null);
-      // console.log(this.get('loan'))
+      this.set("newLoan.name", null);
+      this.set("newLoan.lender", null);
+      this.set("newLoan.principal", null);
+      this.set("newLoan.interest_rate", null);
+      this.set("newLoan.loan_length", null);
     },
     reset () {
-      this.set('newLoan', {});
+      this.set("newLoan.name", null);
+      this.set("newLoan.lender", null);
+      this.set("newLoan.principal", null);
+      this.set("newLoan.interest_rate", null);
+      this.set("newLoan.loan_length", null);
     },
   },
 });

@@ -4,8 +4,8 @@ export default Ember.Component.extend({
   selectedLoan: null,
   selectedTool: null,
   actions: {
-    createLoan(newLoan){
-      return this.sendAction('createLoan', newLoan);
+    createLoan(newestLoan){
+      return this.sendAction('createLoan', newestLoan);
     },
     deleteLoan(loan){
       // console.log(loan)

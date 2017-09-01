@@ -11,8 +11,8 @@ export default Ember.Route.extend({
       this.set('newLoan', {})
     },
     createLoan(loan) {
-      let newLoan = this.get('store').createRecord('loan', loan);
-      newLoan.save()
+      let newestLoan = this.get('store').createRecord('loan', loan);
+      newestLoan.save()
       .then(() => {
         this.get('flashMessages')
         .success('Successfully created a loan!');
