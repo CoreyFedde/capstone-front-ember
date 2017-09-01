@@ -19,6 +19,8 @@ Stack: SQL -> Rails -> Ember
 
 Technologies used:
 HTML, CSS, Ember
+Ember is a frontend framework similar to Angular. It focuses on components and
+routing views through changing the url, but not loading seperate pages.
 
 General Approach:
 My approach to the frontend of this project was to build out a basic client with
