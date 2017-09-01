@@ -3,9 +3,13 @@
 DollarThoughts
 
 Links:
+
 Backend Repo: https://github.com/CoreyFedde/capstone-backend
+
 Backend Deployed: https://thawing-dusk-42030.herokuapp.com/
+
 Frontend Repo: https://github.com/CoreyFedde/capstone-front-ember
+
 Frontend Deployed: https://coreyfedde.github.io/capstone-front-ember/
 
 This work is carried over from previous template: https://github.com/CoreyFedde/capstone-front
