@@ -11,6 +11,7 @@
 {{/unless}}
 
 {{#if (eq selectedTool "loan-review")}}
+  {{loan-donut-chart data=data}}
   {{tools-drop-down/card loan=loan}}
 {{!-- {{else if (eq selectedTool.value "principal-v-interest")}}
 <p>Principal vs Interest</p>
