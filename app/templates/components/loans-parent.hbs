@@ -1,6 +1,6 @@
 {{page-header title="Loans"}}
-<div class="container">
-  <div class="col-md-12">
+<div class="container-fluid">
+  <div class="col-md-6">
     {{loan-list/create-loan-form class="create-form" createLoan="createLoan" loan=loan}}
     <h3>Tracked Loans</h3>
     <h5>Click on a loan to apply our financial tools</h5>
@@ -29,7 +29,7 @@
         {{/if}} --}}
       {{!-- </div> --}}
     {{!-- </div> --}}
-  <div class="col-xs-10 col-xs-offset-1">
+  <div class="col-md-6">
 {{loans-bar-chart data=principal-data}}
 {{loans-bar-chart data=interest-data}}
 {{loans-bar-chart data=length-data}}
