@@ -20,25 +20,34 @@ export default Ember.Route.extend({
         lengthArray.push(lengthValue)
         nameArray.push(name)
       }
+      console.log(principalArray)
+      console.log(interestArray)
+      console.log(lengthArray)
       return {
       loansModel: allLoans,
-      barChart: {
+      principalChart: {
         labels: nameArray,
         datasets: [{
           label: "Principal",
           backgroundColor: 'rgba(0, 0, 255, 0.5)',
           data: principalArray,
+      }]
       },
-      {
-        label: "Interest Rate",
-        backgroundColor: 'rgba(0, 0, 255, 0.5)',
-        data: interestArray,
-    },
-    {
-      label: "Length",
-      backgroundColor: 'rgba(0, 0, 255, 0.5)',
-      data: lengthArray,
-  }]
+      interestChart: {
+        labels: nameArray,
+        datasets: [{
+          label: "Interest Rate",
+          backgroundColor: 'rgba(0, 0, 255, 0.5)',
+          data: interestArray,
+      }]
+      },
+      lengthChart: {
+        labels: nameArray,
+        datasets: [{
+          label: "Length",
+          backgroundColor: 'rgba(0, 0, 255, 0.5)',
+          data: lengthArray,
+      }]
     },
   }
 })
