@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model (params) {
     const currentLoan = this.get('store').findRecord('loan', params.loan_id);
-    console.log('currentLoan: ', currentLoan)
+    console.log('currentLoan', currentLoan)
     return currentLoan.then(function() {
         return {
           loanModel: currentLoan,
