@@ -6,10 +6,6 @@ export default Ember.Route.extend({
     return this.get('store').findAll('loan');
   },
   actions: {
-    willTransition() {
-      console.log('did transition')
-      this.set('newLoan', {})
-    },
     createLoan(loan) {
       let newestLoan = this.get('store').createRecord('loan', loan);
       newestLoan.save()
