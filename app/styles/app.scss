@@ -10,12 +10,24 @@ body {
   margin: 0px;
   // padding: 0px;
 }
-.navbar {
-background-color: #294440;
+// navbar styling - IDs to overwrite bootstrap
+#navbar {
+  background-color: #294440;
 }
-.navbar a,
-.navbar {
-  color: white
+#navbar a,
+#navbar {
+  color: white;
+}
+
+#navbar a:hover,
+#navbar li:hover,
+#navbar a:focus,
+#navbar li:focus {
+  background-color: #528881;
+}
+
+#dropdown a{
+  color: #528881;
 }
 
 // #885159	(136,81,89)
