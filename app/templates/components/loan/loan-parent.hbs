@@ -15,13 +15,19 @@
     Loan Review
     {{loan-donut-chart data=data}}
   </div>
-  <div class="col-sm-3">
-    Interest vs Principal
-    {{loan-interest-chart data=line-data}}
+  <div class="col-md-6">
+    <div class="row">
+    <div class="col-sm-12">
+      Interest vs Principal
+      {{loan-interest-chart data=line-data height=100}}
+    </div>
   </div>
-  <div class="col-sm-3">
-    Balance
-    {{loan-balance-chart data=balance-data}}
+  <div class="row">
+    <div class="col-sm-12">
+      Balance
+      {{loan-balance-chart data=balance-data height=100}}
+    </div>
+  </div>
   </div>
   {{!-- <div class="col-md-12">
 
