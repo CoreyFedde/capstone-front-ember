@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   graph: null,
-  selectedGraph: null,
+  selectedGraph: "principal",
   actions: {
     selectBarGraph() {
       // let tool = this.get('store').peekRecord('tool', toolId)

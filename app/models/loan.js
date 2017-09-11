@@ -8,5 +8,8 @@ export default DS.Model.extend({
   total_interest: DS.attr('number'),
   monthly_payment: DS.attr('number'),
   interest_rate: DS.attr('number'),
-  loan_length: DS.attr('number')
+  loan_length: DS.attr('number'),
+  monthly_interest: DS.attr(),
+  monthly_principal: DS.attr(),
+  monthly_balance: DS.attr()
 });

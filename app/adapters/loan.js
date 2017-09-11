@@ -8,6 +8,9 @@ export default ApplicationAdapter.extend({
     delete serialized.monthly_payment;
     delete serialized.total_amount;
     delete serialized.total_interest;
+    delete serialized.monthly_interest;
+    delete serialized.monthly_principal;
+    delete serialized.monthly_balance;
     const data = {loan: serialized};
     return this.ajax(url, 'POST', {data});
     return this.ajax(url, 'PUT', {data});
@@ -19,6 +22,9 @@ export default ApplicationAdapter.extend({
     delete serialized.monthly_payment;
     delete serialized.total_amount;
     delete serialized.total_interest;
+    delete serialized.monthly_interest;
+    delete serialized.monthly_principal;
+    delete serialized.monthly_balance;
     const data = {loan: serialized};
     return this.ajax(url, 'PUT', {data});
   }

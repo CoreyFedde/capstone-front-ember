@@ -5,6 +5,9 @@
 <h5>Principal: $ {{loan.principal}}</h5>
 <h5>Interest rate: {{loan.interest_rate}}%</h5>
 <h5>Length: {{loan.loan_length}} year(s)</h5>
+<h5>{{loan.monthly_interest}}</h5>
+<h5>{{loan.monthly_principal}}</h5>
+<h5>{{loan.monthly_balance}}</h5>
 <button {{action 'deleteLoan'}}>Delete</button>
 {{#link-to 'loans-edit' loan}}
 <button>Edit</button>
