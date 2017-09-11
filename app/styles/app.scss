@@ -1,6 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
-body { padding-top: 70px; }
+// body { padding-top: 70px; }
 body,
 html {
   width: 100%;
@@ -59,6 +59,16 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
+body {
+  background-color: #F2F2F2;
+}
+.alert {
+  position: fixed;
+  width: auto;
+  top: 0;
+  margin: 0 10%;
+  z-index: 1;
+}
 
 .page-header {
   margin-bottom: 25px;
@@ -69,17 +79,6 @@ body {
   text-align: center;
 }
 
-.masthead {
-  margin: auto;
-  // margin-bottom: 50px;
-  background: url(https://static.pexels.com/photos/259209/pexels-photo-259209.jpeg) no-repeat center center;
-  background-color: #777777;
-  padding: 200px 0 150px;
-  color: white;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-}
 .profile-info {
   text-align: center;
 }
