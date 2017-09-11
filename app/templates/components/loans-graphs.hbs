@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+  <a class="nav-link active" id="principal" href="" {{action 'selectBarGraph'}}>Principal</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" id="interest" href="" {{action 'selectBarGraph'}}>Interest Rate</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" id="length" href="" {{action 'selectBarGraph'}}>Length</a>
+  </li>
+</ul>
+
+{{#if (eq selectedGraph "principal")}}
+Principal
+{{loans-bar-chart data=principal-data}}
+{{else if (eq selectedGraph "interest")}}
+Interest
+{{loans-bar-chart data=interest-data}}
+{{else if (eq selectedGraph "length")}}
+Length
+{{loans-bar-chart data=length-data}}
+{{/if}}

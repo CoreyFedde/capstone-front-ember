@@ -30,8 +30,7 @@
       {{!-- </div> --}}
     {{!-- </div> --}}
   <div class="col-md-6">
-{{loans-bar-chart data=principal-data}}
-{{loans-bar-chart data=interest-data}}
-{{loans-bar-chart data=length-data}}
+    {{loans-graphs principal-data=principal-data interest-data=interest-data length-data=length-data
+      loans=loans selectBarGraph="selectGraph" selectedBarGraph=selectedGraph}}
   </div>
 </div>
