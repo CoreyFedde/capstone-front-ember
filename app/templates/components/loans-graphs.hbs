@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs graph-tabs">
   <li class="nav-item">
   <a class="nav-link active" id="principal" href="" {{action 'selectBarGraph'}}>Principal</a>
   </li>
@@ -10,13 +10,12 @@
   </li>
 </ul>
 
+<div class="loans-graphs">
 {{#if (eq selectedGraph "principal")}}
-Principal
 {{loans-bar-chart data=principal-data options=options}}
 {{else if (eq selectedGraph "interest")}}
-Interest
 {{loans-bar-chart data=interest-data options=options}}
 {{else if (eq selectedGraph "length")}}
-Length
 {{loans-bar-chart data=length-data options=options}}
 {{/if}}
+</div>

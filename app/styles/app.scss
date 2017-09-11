@@ -116,9 +116,23 @@ body {
 
 .create-form  {
 }
-
+.graph-tabs a {
+  background-color: white;
+  color: #528881;
+}
+.loans-graphs {
+  background-color: white;
+  margin-bottom: 10px;
+}
+.loan-card {
+  border: thin solid black;
+  background-color: rgba(136, 100, 81, .3);
+  min-height: 100vh;
+  max-height: 100%;
+}
 .loans-list {
   text-align: center;
   border: thin solid black;
-  margin: 10px;
+  margin: 10px 0;
+  background-color: rgba(136, 100, 81, .3);
 }

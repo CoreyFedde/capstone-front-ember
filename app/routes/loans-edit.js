@@ -5,7 +5,6 @@ export default Ember.Route.extend({
     updateLoan(loan){
       loan.save()
       .then((loan) => {
-        console.log(loan)
         this.transitionTo('loan', loan.id);
       })
       .then(() => {

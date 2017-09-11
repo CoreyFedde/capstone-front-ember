@@ -63,6 +63,9 @@ export default Ember.Route.extend({
     createLoan(loan) {
       let newestLoan = this.get('store').createRecord('loan', loan);
       newestLoan.save()
+      .then((loan) => {
+        this.transitionTo('loan', loan.id);
+      })
       .then(() => {
         this.get('flashMessages')
         .success('Successfully created a loan!');
