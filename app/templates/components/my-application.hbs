@@ -1,13 +1,13 @@
-<nav class="navbar-fixed-top navbar-default bg-faded">
+<nav class="navbar-fixed-top navbar">
   <div class="container-fluid">
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
+      {{!-- <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        {{!-- <li>{{#link-to "users"}}Users{{/link-to}}</li> --}}
+        <li>{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
-      </ul>
+      </ul> --}}
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         {{!-- <li><a href="#">Wellness</a></li> --}}

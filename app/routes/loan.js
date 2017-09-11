@@ -113,12 +113,20 @@ export default Ember.Route.extend({
     }
       console.log(balance_data_array)
 
+      // colors
+      // #885159	(136,81,89)
+      // #645188	(100,81,136)
+      // #886451	(136,100,81)
+      // #528881	(82,136,129)
+      // #000000	(0,0,0)
+
+      // light purple #D0CADB (208,202,219)
         return {
           loanModel: currentLoan,
           donutChart: {
             labels: ['Principal', 'Interest'],
             datasets: [{
-              backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 0, 255, 0.1)'],
+              backgroundColor: ['rgba(100, 81, 136, 0.7)', 'rgba(208, 202, 219, 0.7)'],
               data: [currentLoan.get('principal'),
                      currentLoan.get('total_interest')]
             }]
@@ -127,10 +135,14 @@ export default Ember.Route.extend({
             labels: interest_label_array,
             datasets: [{
               label: 'Interest',
+              borderColor: 'rgba(136, 81, 89, 1)',
+              fill: false,
               data: interest_data_array
             },
             {
               label: 'Principal',
+              borderColor: 'rgba(100, 81, 136, 1)',
+              fill: false,
               data: principal_data_array
             },
           ],
@@ -140,6 +152,8 @@ export default Ember.Route.extend({
           labels: interest_label_array,
           datasets: [{
             label: 'Remaining balance',
+            borderColor: 'rgba(136, 81, 89, 1)',
+            backgroundColor: 'rgba(207, 185, 188, .5)',
             data: balance_data_array
           }],
         }

@@ -26,7 +26,7 @@ export default Ember.Route.extend({
         labels: nameArray,
         datasets: [{
           label: "Principal",
-          backgroundColor: 'rgba(0, 0, 255, 0.5)',
+          backgroundColor: 'rgba(100, 81, 136, .7)',
           data: principalArray,
       }],
       },
@@ -34,7 +34,7 @@ export default Ember.Route.extend({
         labels: nameArray,
         datasets: [{
           label: "Interest Rate",
-          backgroundColor: 'rgba(0, 0, 255, 0.5)',
+          backgroundColor: 'rgba(136, 100, 81, .7)',
           data: interestArray,
       }]
       },
@@ -42,7 +42,7 @@ export default Ember.Route.extend({
         labels: nameArray,
         datasets: [{
           label: "Length",
-          backgroundColor: 'rgba(0, 0, 255, 0.5)',
+          backgroundColor: 'rgba(136, 81, 89, .7)',
           data: lengthArray,
       }]
     },
