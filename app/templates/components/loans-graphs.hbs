@@ -12,11 +12,11 @@
 
 {{#if (eq selectedGraph "principal")}}
 Principal
-{{loans-bar-chart data=principal-data}}
+{{loans-bar-chart data=principal-data options=options}}
 {{else if (eq selectedGraph "interest")}}
 Interest
-{{loans-bar-chart data=interest-data}}
+{{loans-bar-chart data=interest-data options=options}}
 {{else if (eq selectedGraph "length")}}
 Length
-{{loans-bar-chart data=length-data}}
+{{loans-bar-chart data=length-data options=options}}
 {{/if}}

@@ -20,9 +20,6 @@ export default Ember.Route.extend({
         lengthArray.push(lengthValue)
         nameArray.push(name)
       }
-      console.log(principalArray)
-      console.log(interestArray)
-      console.log(lengthArray)
       return {
       loansModel: allLoans,
       principalChart: {
@@ -31,7 +28,7 @@ export default Ember.Route.extend({
           label: "Principal",
           backgroundColor: 'rgba(0, 0, 255, 0.5)',
           data: principalArray,
-      }]
+      }],
       },
       interestChart: {
         labels: nameArray,
@@ -49,6 +46,16 @@ export default Ember.Route.extend({
           data: lengthArray,
       }]
     },
+    barOptions: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 100
+                }
+            }]
+        }
+    }
   }
 })
 },
