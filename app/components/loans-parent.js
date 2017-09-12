@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   selectedLoan: null,
   selectedTool: null,
+  selectedGraph: null,
   actions: {
     createLoan(newestLoan){
       return this.sendAction('createLoan', newestLoan);
@@ -18,6 +19,9 @@ export default Ember.Component.extend({
     },
     selectTool(selecttool) {
       this.set('selectedTool', selecttool);
+    },
+    selectBarGraph(selectGraph) {
+      this.set('selectedGraph', selectGraph);
     }
   }
 });

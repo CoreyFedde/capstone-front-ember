@@ -1,36 +1,166 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
-body { padding-top: 70px; }
+// body { padding-top: 70px; }
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0px;
+  // padding: 0px;
+}
+// navbar styling - IDs to overwrite bootstrap
+#navbar {
+  background-color: #294440;
+}
+#navbar a,
+#navbar {
+  color: white;
+}
+
+#navbar a:hover,
+#navbar li:hover,
+#navbar a:focus,
+#navbar li:focus {
+  background-color: #528881;
+}
+
+#dropdown a{
+  color: #528881;
+}
+
+// #885159	(136,81,89)
+// #645188	(100,81,136)
+// #886451	(136,100,81)
+// #528881	(82,136,129)
+// #000000	(0,0,0)
+
+.cover {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  color: #528881;
+}
+.text-vertical-center {
+  padding-top: 20%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vertical-center h1 {
+  margin: 0, 0, 10px, 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+.money-bag {
+  height: 75px;
+  width: 75px;
+  animation: wiggle 3s linear 2s infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes wiggle {
+  4% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  8%{
+    transform: translate3d(2px, 0, 0);
+  }
+
+  12%{
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  16%{
+    transform: translate3d(2px, 0, 0);
+  }
+
+  20%, 100%{
+    transform: translate3d(0, 0, 0);
+  }
+}
+body {
+  background-color: #F2F2F2;
+}
+.alert {
+  position: fixed;
+  width: auto;
+  top: 0;
+  margin: 0 10%;
+  z-index: 1;
+}
 
 .page-header {
   margin-bottom: 25px;
   background: no-repeat center center;
-  background-color: #777777;
+  background-color: #528881;
   padding-top: 100px;
   color: white;
   text-align: center;
 }
+// #885159	(136,81,89)
+// #645188	(100,81,136)
+// #886451	(136,100,81)
+// #528881	(82,136,129)
+// #000000	(0,0,0)
 
-.masthead {
-  margin: auto;
-  // margin-bottom: 50px;
-  background: url(https://static.pexels.com/photos/259209/pexels-photo-259209.jpeg) no-repeat center center;
-  background-color: #777777;
-  padding: 200px 0 150px;
-  color: white;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-}
 .profile-info {
   text-align: center;
 }
 
 .create-form  {
 }
-
-.loans-list {
-  text-align: center;
+.graph-tabs a {
+  background-color: white;
+  color: #528881;
+}
+.loans-graphs {
+  background-color: white;
+  margin-bottom: 10px;
+}
+.loan-card {
   border: thin solid black;
+  background-color: rgba(136, 100, 81, .3);
+  min-height: 100vh;
+  max-height: 100%;
+}
+.loans-list {
+  border: thin solid black;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  background-color: rgba(136, 100, 81, .3);
+  text-align: center;
+}
+hr {
+  width: 50%;
+  fill: black;
+}
+.update-button {
+  background-color: #528881;
+  color: white;
+}
+
+.remove-button {
+  background-color: #885159;
+  color: white;
+  // position: absolute;
+  // right: 0;
+  // padding: 19px 20px;
+  // padding: 15px 20px;
+}
+.loan-name {
+  border-bottom: thin solid black;
+}
+.btn-lg {
   margin: 10px;
+}
+
+.loan-review {
+text-align: center;
 }

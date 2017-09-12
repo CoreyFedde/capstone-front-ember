@@ -22,24 +22,40 @@ export default Ember.Route.extend({
       }
       return {
       loansModel: allLoans,
-      barChart: {
+      principalChart: {
         labels: nameArray,
         datasets: [{
           label: "Principal",
-          backgroundColor: 'rgba(0, 0, 255, 0.5)',
+          backgroundColor: 'rgba(100, 81, 136, .7)',
           data: principalArray,
+      }],
       },
-      {
-        label: "Interest Rate",
-        backgroundColor: 'rgba(0, 0, 255, 0.5)',
-        data: interestArray,
+      interestChart: {
+        labels: nameArray,
+        datasets: [{
+          label: "Interest Rate",
+          backgroundColor: 'rgba(136, 100, 81, .7)',
+          data: interestArray,
+      }]
+      },
+      lengthChart: {
+        labels: nameArray,
+        datasets: [{
+          label: "Length",
+          backgroundColor: 'rgba(136, 81, 89, .7)',
+          data: lengthArray,
+      }]
     },
-    {
-      label: "Length",
-      backgroundColor: 'rgba(0, 0, 255, 0.5)',
-      data: lengthArray,
-  }]
-    },
+    barOptions: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 10
+                }
+            }]
+        }
+    }
   }
 })
 },
@@ -47,6 +63,9 @@ export default Ember.Route.extend({
     createLoan(loan) {
       let newestLoan = this.get('store').createRecord('loan', loan);
       newestLoan.save()
+      .then(() => {
+        this.transitionTo('profile');
+      })
       .then(() => {
         this.get('flashMessages')
         .success('Successfully created a loan!');
@@ -58,7 +77,11 @@ export default Ember.Route.extend({
       });
     },
     deleteLoan(loan) {
+      // console.log(loan)
       loan.destroyRecord()
+        .then(() => {
+          this.transitionTo('profile');
+        })
         .then(() => {
           this.get('flashMessages')
           .success('Successfully created a loan!');

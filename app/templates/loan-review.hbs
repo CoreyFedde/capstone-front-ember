@@ -1,0 +1,18 @@
+{{page-header title="Loan Review"}}
+loan=model.loanModel data=model.donutChart
+  line-data=model.interestChart balance-data=model.balanceChart
+<div class="container-fluid">
+  <div class="col-sm-3 loan-card">
+    {{loan/loan-card deleteLoan="deleteLoan" loan=model.loanModel}}
+    {{#link-to "loans"}}
+    <button class="btn btn-standard">Back</button>
+    {{/link-to}}
+  </div>
+  <div class="col-sm-3">
+    <h3>Loan Review</h3>
+    <div class="loan-review">
+    {{loan-donut-chart data=model.donutChart}}
+    {{tools-drop-down/card loan=model.loanModel}}
+  </div>
+  </div>
+</div>

@@ -1,22 +1,36 @@
-{{page-header title="Loan"}}
-<div class="container">
-  <div class="col-md-12">
+{{page-header title="Loan Dashboard"}}
+<div class="container-fluid">
+  <div class="col-sm-3 loan-card">
+    <h3>Loan information:</h3>
+    <p> Take a quick glance at the data you've provided</p>
+    {{loan/loan-card deleteLoan="deleteLoan" loan=loan}}
+    {{#link-to "loans"}}
+    <button class="btn btn-standard">Back</button>
+    {{/link-to}}
+  </div>
+  <div class="col-sm-3">
+    <h3>Loan Review:</h3>
+    <p>Review the hidden costs of cumulative interest</p>
+    <div class="loan-review">
+    {{loan-donut-chart data=data}}
+    {{tools-drop-down/card loan=loan}}
+  </div>
+  </div>
+  <div class="col-md-6">
     <div class="row">
-      <div class="col-md-6">
-        <h3>Loan View</h3>
-        {{#link-to "loans"}}
-        back
-        {{/link-to}}
-        <h3>Loan: {{loan.name}}</h3>
-        <h5>Lender: {{loan.lender}}</h5>
-        <h5>Principal: $ {{loan.principal}}</h5>
-        <h5>Interst rate: {{loan.interest_rate}}%</h5>
-        <h5>Length: {{loan.loan_length}} year(s)</h5>
-      </div>
-      <div class="col-md-6">
-        <h3>Tools</h3>
-          {{loans/tools-drop-down loan=loan selectTool="selectTool" selectedTool=selectedTool data=data}}
-      </div>
+    <div class="col-sm-12 divide">
+      <h3>Interest vs Principal:</h3>
+      <p>This chart helps you see how much of your payments are going toward your principal
+        and how much is being spent on interest </p>
+      {{loan-interest-chart data=line-data height=100}}
     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Balance Chart:</h3>
+      <p>One day, that loan will be repaid. See your pay curve here </p>
+      {{loan-balance-chart data=balance-data height=100}}
+    </div>
+  </div>
   </div>
 </div>

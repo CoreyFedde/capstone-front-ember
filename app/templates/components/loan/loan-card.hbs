@@ -1,0 +1,9 @@
+<h3 class="loan-name">{{loan.name}}</h3>
+<ul>
+  {{#if loan.lender}}
+  <li><h4>Lender: {{loan.lender}}</h4></li>
+  {{/if}}
+  <li><h4>Principal: $ {{loan.principal}}</h4></li>
+  <li><h4>Interest rate: {{loan.interest_rate}}%</h4></li>
+  <li><h4>Length: {{loan.loan_length}} year(s)</h4></li>
+</ul>

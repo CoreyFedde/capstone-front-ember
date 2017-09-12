@@ -1,1 +1,8 @@
-{{loans-parent data=model.barChart loans=model.loansModel deleteLoan="deleteLoan" createLoan="createLoan"}}
+{{loans-parent
+  options=model.barOptions
+  deleteLoan="deleteLoan"
+  principal-data=model.principalChart
+  interest-data=model.interestChart
+  length-data=model.lengthChart
+  loans=model.loansModel
+  createLoan="createLoan"}}

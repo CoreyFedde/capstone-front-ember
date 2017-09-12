@@ -1,38 +1,37 @@
-<nav class="navbar-fixed-top navbar-default bg-faded">
+<nav id="navbar" class="navbar-fixed-top navbar">
   <div class="container-fluid">
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
+      {{!-- <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        {{!-- <li>{{#link-to "users"}}Users{{/link-to}}</li> --}}
+        <li>{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
-      </ul>
+      </ul> --}}
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         {{!-- <li><a href="#">Wellness</a></li> --}}
         <li>{{#link-to "loans"}}Loans{{/link-to}}</li>
         {{!-- <li><a href="#">Investing</a></li> --}}
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-          <div class="dropdown-menu">
+          <div id="dropdown" class="dropdown-menu">
               {{!-- <li>{{#link-to "profile"}}Profile{{/link-to}}</li> --}}
             <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
             <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
           </div></li>
         {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+        {{!-- <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li> --}}
         {{/if}}
       </ul>
+      {{#each flashMessages.queue as |flash|}}
+        {{flash-message flash=flash}}
+      {{/each}}
     </div>
   </div>
 </nav>
 
 {{!-- <h1>Corey Web App!</h1> --}}
-
-{{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
-{{/each}}
 
 {{!-- <div class="container-fluid"> --}}
 {{!-- <div class="col-md-10 col-md-offset-1"> --}}
