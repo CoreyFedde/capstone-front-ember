@@ -1,28 +1,28 @@
-{{page-header title="Loan"}}
+{{page-header title="Loan Dashboard"}}
 <div class="container-fluid">
   <div class="col-sm-3 loan-card">
-    <h3>Loan View</h3>
-    {{#link-to "loans"}}
-    back
-    {{/link-to}}
     {{loan/loan-card deleteLoan="deleteLoan" loan=loan}}
-
+    {{#link-to "loans"}}
+    <button class="btn btn-standard">Back</button>
+    {{/link-to}}
   </div>
   <div class="col-sm-3">
-    Loan Review
+    <h3>Loan Review</h3>
+    <div class="loan-review">
     {{loan-donut-chart data=data}}
     {{tools-drop-down/card loan=loan}}
+  </div>
   </div>
   <div class="col-md-6">
     <div class="row">
     <div class="col-sm-12">
-      Interest vs Principal
+      <h3>Interest vs Principal</h3>
       {{loan-interest-chart data=line-data height=100}}
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
-      Balance
+      <h3>Balance</h3>
       {{loan-balance-chart data=balance-data height=100}}
     </div>
   </div>

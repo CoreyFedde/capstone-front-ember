@@ -131,8 +131,27 @@ body {
   max-height: 100%;
 }
 .loans-list {
-  text-align: center;
   border: thin solid black;
   margin: 10px 0;
   background-color: rgba(136, 100, 81, .3);
+}
+.update-button {
+  // margin-right: 80px;
+  // padding: 19px 20px;
+  // position: absolute;
+  // right: 0;
+}
+
+.remove-button {
+  // position: absolute;
+  // right: 0;
+  // padding: 19px 20px;
+  // padding: 15px 20px;
+}
+.loan-name {
+  border-bottom: medium solid black;
+}
+
+.loan-review {
+text-align: center;
 }

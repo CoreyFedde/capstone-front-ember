@@ -1,5 +1,9 @@
-<h3>Loan: {{loan.name}}</h3>
-<h5>Lender: {{loan.lender}}</h5>
-<h5>Principal: $ {{loan.principal}}</h5>
-<h5>Interst rate: {{loan.interest_rate}}%</h5>
-<h5>Length: {{loan.loan_length}} year(s)</h5>
+<h1 class="loan-name">{{loan.name}}</h1>
+<ul>
+  {{#if loan.lender}}
+  <li><h4>Lender: {{loan.lender}}</h4></li>
+  {{/if}}
+  <li><h4>Principal: $ {{loan.principal}}</h4></li>
+  <li><h4>Interst rate: {{loan.interest_rate}}</h4></li>
+  <li><h4>Length: {{loan.loan_length}} year(s)</h4></li>
+</ul>
