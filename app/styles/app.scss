@@ -1,24 +1,23 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
-// body { padding-top: 70px; }
+
 body,
 html {
   width: 100%;
   height: 100%;
 }
+
 body {
   margin: 0px;
-  // padding: 0px;
-}
-// navbar styling - IDs to overwrite bootstrap
-#navbar {
-  background-color: #294440;
-}
-#navbar a,
-#navbar {
-  color: white;
+  background-color: #F2F2F2;
 }
 
+// IDs are used to overwrite bootstrap styling
+#navbar {
+  background-color: #294440;
+  color: white;
+}
+#navbar a,
 #navbar a:hover,
 #navbar li:hover,
 #navbar a:focus,
@@ -30,12 +29,7 @@ body {
   color: #528881;
 }
 
-// #885159	(136,81,89)
-// #645188	(100,81,136)
-// #886451	(136,100,81)
-// #528881	(82,136,129)
-// #000000	(0,0,0)
-
+// Styling for index
 .cover {
   display: table;
   position: relative;
@@ -44,18 +38,21 @@ body {
   background-size: cover;
   color: #528881;
 }
+
 .text-vertical-center {
   padding-top: 20%;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
+
 .text-vertical-center h1 {
   margin: 0, 0, 10px, 0;
   padding: 0;
   font-size: 4.5em;
   font-weight: 700;
 }
+
 .money-bag {
   height: 75px;
   width: 75px;
@@ -64,6 +61,8 @@ body {
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+// Wiggle animation
 @keyframes wiggle {
   4% {
     transform: translate3d(-2px, 0, 0);
@@ -85,9 +84,8 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-body {
-  background-color: #F2F2F2;
-}
+
+// Fixes the flash messages at the top
 .alert {
   position: fixed;
   width: auto;
@@ -104,32 +102,31 @@ body {
   color: white;
   text-align: center;
 }
-// #885159	(136,81,89)
-// #645188	(100,81,136)
-// #886451	(136,100,81)
-// #528881	(82,136,129)
-// #000000	(0,0,0)
 
 .profile-info {
   text-align: center;
 }
 
-.create-form  {
-}
+// Adds color to the tabs for comparison bargraphs
 .graph-tabs a {
   background-color: white;
   color: #528881;
 }
+
 .loans-graphs {
   background-color: white;
   margin-bottom: 10px;
 }
+
+// Styles how the loans are displayed
+
 .loan-card {
   border: thin solid black;
   background-color: rgba(136, 100, 81, .3);
   min-height: 100vh;
   max-height: 100%;
 }
+
 .loans-list {
   border: thin solid black;
   margin: 10px 0;
@@ -137,10 +134,20 @@ body {
   background-color: rgba(136, 100, 81, .3);
   text-align: center;
 }
+
+.loan-name {
+  border-bottom: thin solid black;
+}
+
+.loan-review {
+text-align: center;
+}
+
 hr {
   width: 50%;
-  fill: black;
 }
+
+// Coloring for custom buttons
 .update-button {
   background-color: #528881;
   color: white;
@@ -149,18 +156,8 @@ hr {
 .remove-button {
   background-color: #885159;
   color: white;
-  // position: absolute;
-  // right: 0;
-  // padding: 19px 20px;
-  // padding: 15px 20px;
-}
-.loan-name {
-  border-bottom: thin solid black;
-}
-.btn-lg {
-  margin: 10px;
 }
 
-.loan-review {
-text-align: center;
+.btn-lg {
+  margin: 10px;
 }

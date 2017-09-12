@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
+  // Chart.js required a custom model to return objects and chart data
   model () {
     const allLoans = this.get('store').findAll('loan')
     let principalArray = []
@@ -10,11 +11,14 @@ export default Ember.Route.extend({
     let nameArray = []
     return allLoans.then(function(loan) {
       const allLoansArray = loan.toArray()
+      // This for loop iterates through the loans data and grabs the principal
+      // interest, length of the loan, and its name
       for (let i = 0; i < allLoansArray.length; i++) {
         let principalValue = allLoansArray[i].get('principal')
         let interestValue = allLoansArray[i].get('interest_rate')
         let lengthValue = allLoansArray[i].get('loan_length')
         let name = allLoansArray[i].get('name')
+        // The values are then push into an array that is used in the graphs
         principalArray.push(principalValue)
         interestArray.push(interestValue)
         lengthArray.push(lengthValue)
@@ -46,6 +50,9 @@ export default Ember.Route.extend({
           data: lengthArray,
       }]
     },
+    // The bar options tells the bar graphs to start at 0 no matter what
+    // Chart.js responsive auto sets the y axis to start at the top of the
+    // smallest bar chart
     barOptions: {
         scales: {
             xAxes: [{

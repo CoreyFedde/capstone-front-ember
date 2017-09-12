@@ -1,5 +1,6 @@
 {{page-header title="Loan Dashboard"}}
 <div class="container-fluid">
+  {{!-- Column for the loan information --}}
   <div class="col-sm-3 loan-card">
     <h3>Loan information:</h3>
     <p> Take a quick glance at the data you've provided</p>
@@ -8,6 +9,7 @@
     <button class="btn btn-standard">Back</button>
     {{/link-to}}
   </div>
+  {{!-- Column for the donut chart --}}
   <div class="col-sm-3">
     <h3>Loan Review:</h3>
     <p>Review the hidden costs of cumulative interest</p>
@@ -16,6 +18,7 @@
     {{tools-drop-down/card loan=loan}}
   </div>
   </div>
+  {{!-- Column for both line charts --}}
   <div class="col-md-6">
     <div class="row">
     <div class="col-sm-12 divide">

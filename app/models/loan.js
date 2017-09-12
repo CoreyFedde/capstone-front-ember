@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 
+// The blank DS.attr() are for virtuals that return arrays
 export default DS.Model.extend({
   name: DS.attr('string'),
   principal: DS.attr('number'),

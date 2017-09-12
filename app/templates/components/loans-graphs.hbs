@@ -1,21 +1,21 @@
 <ul class="nav nav-tabs graph-tabs">
   <li class="nav-item">
-  <a class="nav-link active" id="principal" href="" {{action 'selectBarGraph'}}>Principal</a>
+    <a class="nav-link active" id="principal" href="" {{action 'selectBarGraph'}}>Principal</a>
   </li>
   <li class="nav-item">
-  <a class="nav-link" id="interest" href="" {{action 'selectBarGraph'}}>Interest Rate</a>
+    <a class="nav-link" id="interest" href="" {{action 'selectBarGraph'}}>Interest Rate</a>
   </li>
   <li class="nav-item">
-  <a class="nav-link" id="length" href="" {{action 'selectBarGraph'}}>Length</a>
+    <a class="nav-link" id="length" href="" {{action 'selectBarGraph'}}>Length</a>
   </li>
 </ul>
 
 <div class="loans-graphs">
-{{#if (eq selectedGraph "principal")}}
-{{loans-bar-chart data=principal-data options=options}}
-{{else if (eq selectedGraph "interest")}}
-{{loans-bar-chart data=interest-data options=options}}
-{{else if (eq selectedGraph "length")}}
-{{loans-bar-chart data=length-data options=options}}
-{{/if}}
+  {{#if (eq selectedGraph "principal")}}
+    {{loans-bar-chart data=principal-data options=options}}
+  {{else if (eq selectedGraph "interest")}}
+    {{loans-bar-chart data=interest-data options=options}}
+  {{else if (eq selectedGraph "length")}}
+    {{loans-bar-chart data=length-data options=options}}
+  {{/if}}
 </div>

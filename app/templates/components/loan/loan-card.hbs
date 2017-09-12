@@ -1,5 +1,6 @@
 <h3 class="loan-name">{{loan.name}}</h3>
 <ul>
+  {{!-- if statement detects where loan.lender exists --}}
   {{#if loan.lender}}
   <li><h4>Lender: {{loan.lender}}</h4></li>
   {{/if}}

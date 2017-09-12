@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+// Sends the data for the delete and create action up
+// The selectTool would set an object to match the value of the data passed up
 export default Ember.Component.extend({
   selectedTool: null,
   actions: {
@@ -7,9 +9,7 @@ export default Ember.Component.extend({
       return this.sendAction('createLoan', newLoan);
     },
     deleteLoan(loan){
-      // console.log('loan-parent:', loan)
       return this.sendAction('deleteLoan', loan);
-      // console.log(this.get('loan'))
     },
     selectTool(selecttool) {
       this.set('selectedTool', selecttool);

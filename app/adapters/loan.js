@@ -1,5 +1,8 @@
 import ApplicationAdapter from './application';
 
+// These adapters wrap the data being sent back to the API
+// The deleted serialized attributes are virtuals that will cause a 500 error
+// if included in the request
 export default ApplicationAdapter.extend({
   createRecord(store, type, record) {
     const serialized = this.serialize(record, {includeID: true});
