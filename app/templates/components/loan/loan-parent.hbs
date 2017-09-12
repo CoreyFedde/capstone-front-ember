@@ -1,15 +1,16 @@
 {{page-header title="Loan Dashboard"}}
 <div class="container-fluid">
   <div class="col-sm-3 loan-card">
+    <h3>Loan information:</h3>
+    <p> Take a quick glance at the data you've provided</p>
     {{loan/loan-card deleteLoan="deleteLoan" loan=loan}}
     {{#link-to "loans"}}
     <button class="btn btn-standard">Back</button>
     {{/link-to}}
   </div>
   <div class="col-sm-3">
-    {{#link-to 'loan-review' loan}}
-    <h3>Loan Review</h3>
-    {{/link-to}}
+    <h3>Loan Review:</h3>
+    <p>Review the hidden costs of cumulative interest</p>
     <div class="loan-review">
     {{loan-donut-chart data=data}}
     {{tools-drop-down/card loan=loan}}
@@ -17,18 +18,17 @@
   </div>
   <div class="col-md-6">
     <div class="row">
-    <div class="col-sm-12">
-      {{#link-to 'interest-vs-principal' loan}}
-      <h3>Interest vs Principal</h3>
-      {{/link-to}}
+    <div class="col-sm-12 divide">
+      <h3>Interest vs Principal:</h3>
+      <p>This chart helps you see how much of your payments are going toward your principal
+        and how much is being spent on interest </p>
       {{loan-interest-chart data=line-data height=100}}
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
-      {{#link-to 'balance-chart' loan}}
-      <h3>Balance</h3>
-      {{/link-to}}
+      <h3>Balance Chart:</h3>
+      <p>One day, that loan will be repaid. See your pay curve here </p>
       {{loan-balance-chart data=balance-data height=100}}
     </div>
   </div>

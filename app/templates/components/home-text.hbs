@@ -4,10 +4,10 @@
     <h1>DollarThoughts</h1>
         <h4> We're here to make money less confusing</h4>
     {{#if isAuthenticated}}
-    {{#link-to "loans"}}<button class="btn btn-success signed-out-button" id="signUpButton" type="button"  data-toggle="modal" data-target="#signUpModal">Check out your loans</button>{{/link-to}}
+    {{#link-to "loans"}}<button class="btn btn-success signed-out-button" type="button">Check out your loans</button>{{/link-to}}
     {{else}}
-    {{#link-to "sign-up"}}<button class="btn btn-success signed-out-button" id="signUpButton" type="button"  data-toggle="modal" data-target="#signUpModal">Sign Up</button>{{/link-to}}
-    {{#link-to "sign-in"}}<button class="btn btn-success signed-out-button" id="signInButton" type="button"  data-toggle="modal" data-target="#signInModal">Sign In</button>{{/link-to}}
+    {{#link-to "sign-up"}}<button class="btn btn-lg btn-success signed-out-button" type="button">Sign Up</button>{{/link-to}}
+    {{#link-to "sign-in"}}<button class="btn btn-lg btn-success signed-out-button" type="button">Sign In</button>{{/link-to}}
     {{/if}}
   </div>
 </div>

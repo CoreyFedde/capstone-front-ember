@@ -133,23 +133,32 @@ body {
 .loans-list {
   border: thin solid black;
   margin: 10px 0;
+  padding-bottom: 10px;
   background-color: rgba(136, 100, 81, .3);
+  text-align: center;
+}
+hr {
+  width: 50%;
+  fill: black;
 }
 .update-button {
-  // margin-right: 80px;
-  // padding: 19px 20px;
-  // position: absolute;
-  // right: 0;
+  background-color: #528881;
+  color: white;
 }
 
 .remove-button {
+  background-color: #885159;
+  color: white;
   // position: absolute;
   // right: 0;
   // padding: 19px 20px;
   // padding: 15px 20px;
 }
 .loan-name {
-  border-bottom: medium solid black;
+  border-bottom: thin solid black;
+}
+.btn-lg {
+  margin: 10px;
 }
 
 .loan-review {

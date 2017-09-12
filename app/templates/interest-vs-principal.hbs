@@ -1,6 +1,4 @@
-{{page-header title="Loan Review"}}
-loan=model.loanModel data=model.donutChart
-  line-data=model.interestChart balance-data=model.balanceChart
+{{page-header title="Interest vs Principal"}}
 <div class="container-fluid">
   <div class="col-sm-3 loan-card">
     {{loan/loan-card deleteLoan="deleteLoan" loan=model.loanModel}}
@@ -19,13 +17,13 @@ loan=model.loanModel data=model.donutChart
     <div class="row">
     <div class="col-sm-12">
       <h3>Interest vs Principal</h3>
-      {{loan-interest-chart data=line-data height=100}}
+      {{loan-interest-chart data=model.interestChart height=100}}
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <h3>Balance</h3>
-      {{loan-balance-chart data=balance-data height=100}}
+      {{loan-balance-chart data=model.balanceChart height=100}}
     </div>
   </div>
   </div>
