@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     updateLoan(loan){
       loan.save()
       .then((loan) => {
-        this.transitionTo('loan', loan.id);
+        this.transitionTo('loans');
       })
       .then(() => {
         this.get('flashMessages')

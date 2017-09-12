@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
+    const allLoans = this.get('store').findAll('loan')
     const currentLoan = this.get('store').findRecord('loan', params.loan_id);
     return currentLoan.then(function() {
       // grabbing ticks for interest graph
@@ -31,7 +32,6 @@ export default Ember.Route.extend({
           }
         }
       }
-      console.log(interest_label_array)
 
       // grabbing partial data for abridged interest graph
       let interest_array = currentLoan.get('monthly_interest')
@@ -58,7 +58,6 @@ export default Ember.Route.extend({
           }
         }
       }
-      console.log(interest_data_array)
       // grabbing parital data of principal
       let principal_array = currentLoan.get('monthly_principal')
       let principal_data_array = [0]
@@ -84,7 +83,6 @@ export default Ember.Route.extend({
         }
       }
     }
-      console.log(principal_data_array)
       // grabbing parital data of balance
       let balance_array = currentLoan.get('monthly_balance')
       let first_balance = currentLoan.get('principal')
@@ -111,7 +109,6 @@ export default Ember.Route.extend({
         }
       }
     }
-      console.log(balance_data_array)
 
       // colors
       // #885159	(136,81,89)
@@ -160,4 +157,5 @@ export default Ember.Route.extend({
         }
       })
     }
-  });
+  }
+);

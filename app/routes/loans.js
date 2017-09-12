@@ -63,8 +63,8 @@ export default Ember.Route.extend({
     createLoan(loan) {
       let newestLoan = this.get('store').createRecord('loan', loan);
       newestLoan.save()
-      .then((loan) => {
-        this.transitionTo('loan', loan.id);
+      .then(() => {
+        this.transitionTo('profile');
       })
       .then(() => {
         this.get('flashMessages')
@@ -77,7 +77,11 @@ export default Ember.Route.extend({
       });
     },
     deleteLoan(loan) {
+      // console.log(loan)
       loan.destroyRecord()
+        .then(() => {
+          this.transitionTo('profile');
+        })
         .then(() => {
           this.get('flashMessages')
           .success('Successfully created a loan!');

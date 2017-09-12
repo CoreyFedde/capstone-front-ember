@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       return this.sendAction('createLoan', newLoan);
     },
     deleteLoan(loan){
-      // console.log(loan)
+      // console.log('loan-parent:', loan)
       return this.sendAction('deleteLoan', loan);
       // console.log(this.get('loan'))
     },
